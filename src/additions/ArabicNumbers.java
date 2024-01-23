@@ -15,10 +15,9 @@ public class ArabicNumbers {
         this.stringArabicNumbers = stringArabicNumbers;
     }
 
+
     private String calculatorArabic(String stringArabicNumbers) {
-
         Matcher matcher = Pattern.compile("[-+*/]").matcher(stringArabicNumbers);
-
         int index = 0;
 
         String element = null;

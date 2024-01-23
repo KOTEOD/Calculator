@@ -1,7 +1,5 @@
 package additions;
 
-import exceptions.CalcException;
-import exceptions.Exception1;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -17,13 +15,14 @@ public class RomanNumerals {
         this.stringRomanNumbers = stringRomanNumbers;
     }
 
-
     public String calculatorRoman(String stringRomanNumbers) {
+
         Matcher matcher = Pattern.compile("[-+*/]").matcher(stringRomanNumbers);
 
         int index = 0;
         int resultCount;
         String element = null;
+
 
 
         while (matcher.find()) {
@@ -60,7 +59,7 @@ public class RomanNumerals {
                 break;
         }
         if (startOut < 0) {
-            throw new Exception1("Value negative int Roman Caclc");
+            throw new RuntimeException("Value negative int Roman Caclc");
         }
         StringBuilder stringBuilderValues = new StringBuilder();
         if (startOut <= 10) {
